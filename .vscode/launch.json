@@ -8,16 +8,16 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\ranvier",
+            "program": "${workspaceRoot}/ranvier",
             "args": ["-v"],
-            "console": "externalTerminal",
+            "console": "integratedTerminal",
             "cwd": "${workspaceRoot}"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Launch Mocha Test (Debug)",
-            "program": "${workspaceRoot}\\node_modules\\mocha\\bin\\_mocha",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "args": ["**/*.js", "--no-timeouts"],
             "stopOnEntry": false,
             "runtimeExecutable": null,
@@ -25,7 +25,7 @@
                 "NODE_ENV": "testing"
             },
             "console": "integratedTerminal",
-            "cwd": "${workspaceRoot}\\test"
+            "cwd": "${workspaceRoot}/test"
             
 
         },
