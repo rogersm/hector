@@ -23,11 +23,6 @@ const JsonDataSource = require('./JsonDataSource');
  */
 class JsonDirectoryDataSource extends FileDataSource {
 
-  hasData(config = {}) {
-    const filepath = this.resolvePath(config);
-    return Promise.resolve(fs.existsSync(filepath));
-  }
-
   fetchAll(config = {}) {
     const dirPath = this.resolvePath(config);
 

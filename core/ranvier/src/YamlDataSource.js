@@ -13,11 +13,6 @@ const FileDataSource = require('./FileDataSource');
  */
 class YamlDataSource extends FileDataSource {
 
-  hasData(config = {}) {
-    const filepath = this.resolvePath(config);
-    return Promise.resolve(fs.existsSync(filepath));
-  }
-
   fetchAll(config = {}) {
     const filepath = this.resolvePath(config);
 

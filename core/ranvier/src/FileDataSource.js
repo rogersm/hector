@@ -8,6 +8,12 @@ class FileDataSource {
     this.root = rootPath;
   }
 
+  hasData(config = {}) {
+    const filepath = this.resolvePath(config);
+    
+    return Promise.resolve(fs.existsSync(filepath));
+  }
+
   /**
    * Parse [AREA] and [BUNDLE] template in the path
    * @param {string} path
@@ -35,8 +41,7 @@ class FileDataSource {
 
     return this.root + '/' + path
       .replace('[AREA]', area)
-      .replace('[BUNDLE]', bundle)
-    ;
+      .replace('[BUNDLE]', bundle);
   }
 }
 
